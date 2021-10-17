@@ -15,7 +15,7 @@
     <title>변수 사용</title>
 </head>
 <body>
-    <br>asdfasdf<hr>
+    <br>a<hr>
     <?= $a ?>
 </body>
 </html>
