@@ -10,7 +10,7 @@
   primary key(num)
   );
   
-insert into member (id, name, gender, post_num, address, tel, age) values ('yjhwang', '황영주', 'M', '100-011', '서울시 중구 충무로1가', '234-8879', 35);
+insert into member (id, name, gender, post_num, address, tel, age) values ('yjhwang', '황영주', 'M', '100-011', '서울시 중구 충무로1가', '234-8879', 36);
 insert into member (id, name, gender, post_num, address, tel, age) values ('khshul', '설기형', 'M', '607-010', '부산시 동래구 명륜동', '764-3784', 33);
 insert into member (id, name, gender, post_num, address, tel, age) values ('chpark', '박철호', 'M', '503-200', '광주시 남구 지석동', '298-9730', 34);
 insert into member (id, name, gender, post_num, address, tel, age) values ('shlee', '이상훈', 'M', '503-201', '광주시 남구 도금동', '838-4347', 32);
@@ -45,3 +45,4 @@ insert into member (id, name, gender, post_num, address, tel, age) values ('myju
 insert into member (id, name, gender, post_num, address, tel, age) values ('jsyou', '유지수', 'W', '502-772', '광주시 서구 치평동', '309-3897', 49);
 insert into member (id, name, gender, post_num, address, tel, age) values ('dsshin', '신달성', 'W', '530-145', '전라남도 신안군 장산면', '399-8789', 53);
 insert into member (id, name, gender, post_num, address, tel, age) values ('sjshin', '신수진', 'W', '606-796', '부산시 영도구 봉래동5가', '389-8930', 47);
+
