@@ -3,7 +3,7 @@
     echo "<h1>타이틀</h1>";
     echo "<span>red</span><br>";
 
-    $a = 36;
+    $a = 32;
 ?>
 
 <!DOCTYPE html>
