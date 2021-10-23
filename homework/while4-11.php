@@ -19,7 +19,7 @@
                 <td>화씨</td>
             </tr>
             <?php
-            for ($c = -15; $c <= 35; $c = $c + 5) {
+            for ($c = -15; $c <= 36; $c = $c + 5) {
                 $f = $c * 9 / 5 + 32;
                 echo "<tr align = 'center'><td>$c</td><td>$f</td></tr>";
             }
