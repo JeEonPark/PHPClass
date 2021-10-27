@@ -16,7 +16,7 @@
         <?php
             echo "<div>asdff</div>";
             $a = 10;
-            $b = 21;
+            $b = 20;
             $c = $a + $b;
             echo "$c<br>"; //<> 는 태그라서 분류 가능
 
