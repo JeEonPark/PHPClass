@@ -11,7 +11,7 @@
         <input type="radio" name="test" value="1">1</input>
         <input type="radio" name="test" value="2">2</input>
 
-        <input type="submit" value="asdafasdf">
+        <input type="submit" value="asdfssdf">
     </form>
     
 

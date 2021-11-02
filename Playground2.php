@@ -1,8 +1,8 @@
 <?php
     $bool = $_POST["test"];
     if($bool == 1){
-        $a = setcookie("a", "aaa");
+        $a = setcookie("a", "aaaaa");
     } else {
-        $b = setcookie("b", "bbb");
+        $b = setcookie("b", "bbbbb");
     }
 ?>
