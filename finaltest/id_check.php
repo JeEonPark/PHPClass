@@ -5,10 +5,31 @@
 
     if($id) {
         $con = mysqli_connect("localhost", "root", "root", "sample3");
-        $sql = "select * from logtable where id='$id'";
+        $sql = "select id from logtable where id='$id'";
         $result = mysqli_query($con, $sql);
+
+        $num = mysqli_num_rows($result);
+        for($i = 0; $i < $num; $i++){
+            $rs = mysqli_fetch_array($result);
+            echo $rs["id"]."<br>";
+        }
+
+        $result2 = mysqli_fetch_array($result);
+        $result3 = mysqli_fetch_array($result);
+        
+
+        echo "<hr>";
+        print_r($result);
+        echo "<hr>";
+        print_r($result2);
+        echo "<hr>";
+        print_r($result3);
+
+
         $num = mysqli_num_rows($result);
         mysqli_close($con);
+
+        echo "<hr>";
 
         if($num) {
             //아이디 이미 사용 중
