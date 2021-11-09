@@ -24,7 +24,7 @@
             $c = $a * 3;
             echo '$c<br>';
 
-            $fruit = "orange";
+            $fruit = "orasnge";
             
             echo "{$fruit}띄어쓰기!";
         ?>
