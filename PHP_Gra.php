@@ -1,5 +1,5 @@
 <?php
-    $variable = 1;
+    $variable = 2;
     echo "var is ".$variable;
     echo "var is $variable";
     echo "<br>";
