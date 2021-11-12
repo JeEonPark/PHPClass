@@ -16,7 +16,9 @@
                 alert('비밀번호가 틀렸습니다.');
                 history.go(-1);
             </script>";
-        } else { //비밀번호 맞음
+        } else { //비밀번호 맞음, 로그인 성공
+            session_start();
+            $_SESSION["userid"] = $id;
             echo "
             <script>
                 location.href = 'index2.php';
