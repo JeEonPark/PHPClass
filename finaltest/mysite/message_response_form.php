@@ -38,7 +38,7 @@
 <?php
 	$num  = $_GET["num"];
 
-	$con = mysqli_connect("localhost", "user1", "12345", "sample");
+	$con = mysqli_connect("localhost", "root", "root", "sample3", 8889);
 	$sql = "select * from message where num=$num";
 	$result = mysqli_query($con, $sql);
 

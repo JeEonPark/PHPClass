@@ -28,7 +28,8 @@
 ?>
 
 <hr>
-<?php
-    $i = 100;
-
-?>
+<ul>
+    <li><a href="index2.php">홈페이지</a></li>
+    <li><a href="msg_form.php">쪽지 보내기</a></li>
+</ul>
+<hr>
