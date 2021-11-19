@@ -116,7 +116,7 @@
 
             echo "복지카드 소지 : $welfare<br>";
             echo "국가유공자증 소지 : $youkong<br>";
-            echo "17시 이후 입장 : $after<br>";
+            echo "18시 이후 입장 : $after<br>";
             echo "나이 : $age<br>";
             echo "입장료 : $fee";
         ?>
