@@ -4,7 +4,7 @@
     echo "var is $variable";
     echo "<br>";
 
-    $a = 376125;
+    $a = 36125;
     echo "\$a : $a";
     
 
