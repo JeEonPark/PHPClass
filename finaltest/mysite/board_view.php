@@ -22,7 +22,7 @@
 	$num  = $_GET["num"];
 	$page  = $_GET["page"];
 
-	$con = mysqli_connect("localhost", "user1", "12345", "sample");
+    $con = mysqli_connect("localhost", "root", "root", "sample3", 8889);
 	$sql = "select * from board where num=$num";
 	$result = mysqli_query($con, $sql);
 
@@ -57,7 +57,7 @@
 						$file_size = filesize($file_path);
 
 						echo "▷ 첨부파일 : $file_name ($file_size Byte) &nbsp;&nbsp;&nbsp;&nbsp;
-			       		<a href='download.php?num=$num&real_name=$real_name&file_name=$file_name&file_type=$file_type'>[저장]</a><br><br>";
+			       		<a href='board_download.php?num=$num&real_name=$real_name&file_name=$file_name&file_type=$file_type'>[저장]</a><br><br>";
 			           	}
 				?>
 				<?=$content?>

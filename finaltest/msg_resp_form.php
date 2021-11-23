@@ -20,7 +20,7 @@
         $subject = $record['subject'];
         $content = $record['content'];
 
-        $subject = "RE: ".$subject;
+        $subject = "RE:&nbsp".$subject;
         $content = ">".$content;
         $content = str_replace("\n", "\n>", $content);
         $content = "\n\n\n\n\n---------------------------\n".$content;
@@ -28,8 +28,9 @@
     <form name="rep_form" method="POST" action="msg_insert.php?id=<?=$userid?>">
         <div>보내는 사람 : <?=$userid?> </div>
         <div>받는 사람 : <?=$sendid?></div>
-        <div>제목 : <input type="text" name=""</div>
-        <div>내용 : </div>
+        <input type="hidden" name="rv_id" value="<?=$sendid?>">
+        <div>제목 : <input type="text" name="subject" value=<?=$subject?>></div>
+        <div>내용 : <textarea name="content"><?=$content?></textarea></div>
 
         <input type="submit" value="답장하기">
     </form>
