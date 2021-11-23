@@ -11,6 +11,12 @@
 
     <?php
         $mode = $_GET['mode'];
+
+        if(isset($_GET['page'])){
+            $page = $_GET['page'];
+        } else {
+            $page = 1;
+        }
         if($mode == "send"){
             $title = "송신 쪽지함 > 리스트";
             $sql = "select * from message where send_id='$userid' order by num desc";
@@ -22,6 +28,16 @@
         $con = mysqli_connect("localhost", "root", "root", "sample3", 8889);
         $rs = mysqli_query($con, $sql);
         $msg_num = mysqli_num_rows($rs);
+        $total = $msg_num;
+        $scale = 2;
+        if($total % $scale == 0) {
+            $t_page = floor($total / $scale);
+        } else {
+            $t_page = floor($total / $scale) + 1;
+        }
+
+
+        $start = ($page - 1) * $scale;
     ?>
     
     <h3><?= $title ?></h3>
@@ -32,8 +48,9 @@
         <span>등록일</span>
         <hr>
         <?php
-            $n = $msg_num;
-            for($i = 0; $i < $msg_num; $i++) {
+            $n = $total - $start; //$msg_num;
+            for($i = $start; $i < $start + $scale && $i < $total; $i++) {
+                mysqli_data_seek($rs, $i);
                 $row = mysqli_fetch_array($rs);
                 $num = $row['num'];
                 $subject = $row['subject'];
@@ -55,6 +72,32 @@
 
             mysqli_close($con);
         ?>
+
+
+        <?php
+            if($page >= 2 && $t_page >=2){
+                $new_page = $page - 1;
+                echo "<a href='msg_box.php?mode=$mode&page=$new_page'>이전</a> ";
+            } else {
+                echo "&nbsp;";
+            }
+            
+            for($i = 1; $i <= $t_page; $i++){
+                if($i == $page) {
+                    echo "<b>$i</b>";
+                } else {
+                    echo "<a href='msg_box.php?mode=$mode&page=$i'>$i</a> ";
+                }
+            }
+            if($t_page >= 2 && $page < $t_page) {
+                $new_page = $page + 1;
+                echo " <a href='msg_box.php?mode=$mode&page=$new_page'>다음</a>";
+            } else {
+                echo "&nbsp;";
+            }
+        ?>
+
+        <hr>
 
         <button onclick="location.href='msg_box.php?mode=rv'">수신쪽지함</button>
         <button onclick="location.href='msg_box.php?mode=send'">송신쪽지함</button>

@@ -24,6 +24,10 @@
 
         $subject = $record['subject'];
         $content = $record['content'];
+
+        $content = str_replace(" ", "$nbsp;", $content);
+        $content = str_replace("\n", "<br>", $content);
+
         $day = $record['regist_day'];
         if($mode == "send") {
             $user = $record['rv_id'];
@@ -38,6 +42,15 @@
     <hr>
     <button onclick="location.href='msg_box.php?mode=rv'">수신쪽지함</button>
     <button onclick="location.href='msg_box.php?mode=send'">송신쪽지함</button>
+    <?php 
+            if($mode == "rv"){
+                ?>
+                    <button onclick="location.href='msg_resp_form.php?num=<?=$num?>'">답변하기</button>
+
+                <?php
+            }
+        ?>
+        <button onclick="location.href='msg_delete.php?mode=<?=$mode?>&num=<?=$num?>'">삭제</button>
 
     <?php include "footer.php" ?>
 </body>

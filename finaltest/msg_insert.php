@@ -33,7 +33,7 @@
     mysqli_close($con);
 
     echo "<script>
-            location.href = 'index2.php';
+            location.href = 'msg_box.php?mode=send';
         </script>";
 
 ?>
