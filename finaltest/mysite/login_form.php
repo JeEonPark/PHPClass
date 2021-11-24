@@ -30,7 +30,7 @@
                       	<a href="#"><img src="./img/login.png" onclick="check_input()"></a>
                   	</div>		    	
            		</form>
-        		</div> <!-- login_form -->
+        		</div>
     		</div> <!-- login_box -->
         </div> <!-- main_content -->
 	</section> 
