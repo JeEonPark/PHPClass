@@ -16,7 +16,7 @@
         echo "$userid | ";
         echo "<a href='logout.php'>로그아웃</a> | ";
         echo "<a href='modify_form.php'>정보수정</a>";
-    } else { //로그인 전
+    } else { //로그인 하기 전
 ?>
 
 <a href="member_form.php">회원가입</a> | 
