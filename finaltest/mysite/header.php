@@ -33,7 +33,7 @@
     }
 ?>
 <?php
-    if($userlevel==1) {
+    if($userlevel==1) { 
 ?>
                 <li> | </li>
                 <li><a href="admin.php">관리자 모드(15장)</a></li>
