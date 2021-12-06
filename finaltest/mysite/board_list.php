@@ -47,7 +47,7 @@
 		$total_page = floor($total_record/$scale) + 1; 
  
 	// 표시할 페이지($page)에 따라 $start 계산  
-	$start = ($page - 1) * $scale;      
+	$start = ($page - 1) * $scale;
 
 	$number = $total_record - $start;
 
